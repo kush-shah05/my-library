@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp">
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/collapsedRelLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent">
+
+            <ImageView
+                android:id="@+id/imgbook"
+                android:layout_width="200dp"
+                android:layout_height="220dp"
+                android:src="@drawable/ic_launcher_background" />
+
+            <TextView
+                android:id="@+id/txtbookname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imgbook"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="5dp"
+                android:text="book name"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_centerHorizontal="true"
+                android:textColor="@android:color/white"/>
+            <ImageView
+                android:id="@+id/arrow_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_down"
+              android:layout_below="@id/imgbook"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="7dp"/>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/expandedRelLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/collapsedRelLayout"
+            android:visibility="visible"
+            android:background="@android:color/holo_blue_dark">
+
+            <TextView
+                android:id="@+id/txtauthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="author:"
+               android:layout_marginStart="5dp" />
+
+
+            <TextView
+                android:id="@+id/authortxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtauthor"
+                android:layout_centerHorizontal="true"
+                android:text="Kush"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/txtshortdesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/authortxt"
+                android:layout_marginTop="7dp"
+                android:text="Short Description:"
+                android:layout_marginStart="5dp"/>
+            <ImageView
+                android:id="@+id/arrow_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_up"
+                android:layout_below="@id/txtshortdesc"
+                android:layout_alignParentEnd="true"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete"
+                android:id="@+id/btndelete"
+                android:layout_below="@id/txtshortdesc"
+                android:layout_toStartOf="@id/arrow_up"
+                android:layout_marginEnd="7dp"
+                android:textColor="@color/red"
+                android:visibility="visible"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
